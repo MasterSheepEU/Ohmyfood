@@ -1,5 +1,306 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Lepcha&family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+/* Paramétres globaux */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  box-sizing: border-box;
+}
+
 body {
-  background: black;
+  width: 375px;
+  margin: auto;
+  font-family: "roboto", sans-serif;
+}
+
+label {
+  display: none;
+}
+
+.restaurant-list .restaurant-card img {
+  width: 100%;
+  height: 174px;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+header img {
+  width: 162px;
+  height: 44px;
+  object-fit: contain;
+  display: flex;
+  margin: auto;
+  margin-top: 14px;
+}
+
+header button {
+  height: 50px;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+header span {
+  color: white;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.restaurant-list .fa-heart {
+  font: var(--fa-font-regular);
+  font-size: 25px;
+  position: absolute;
+}
+
+.restaurant-list .fa-heart:hover {
+  font: var(--fa-font-solid);
+  font-size: 25px;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.explanation .explanation__step1, .explanation .explanation__step3, .explanation .explanation__step2 {
+  font-size: 16px;
+  font-weight: 500;
+  width: 322.49px;
+  height: 72.38px;
+  margin-left: 32.51px;
+  background: #F7F7F7;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+/* Polices */
+form p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+form input {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.restaurant-card__description h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.restaurant-card__description p {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+/* Header */
+form {
+  background: #f7f7f7;
+  height: 335px;
+}
+
+header input {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  background-color: #EAEAEA;
+  border: none;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+header .fa-location-dot {
+  position: absolute;
+  z-index: 1;
+  margin-top: 16px;
+  margin-left: 104px;
+}
+header h2 {
+  width: 275px;
+  height: 68px;
+  margin: auto;
+  margin-top: 39px;
+  text-align: center;
+}
+header p {
+  width: 315px;
+  height: 46px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 27px;
+}
+header button {
+  width: 218px;
+}
+header button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+.explanation .explanation__tittle {
+  margin-top: 48px;
+  margin-left: 20px;
+  margin-bottom: 26px;
+}
+.explanation ul {
+  height: 335px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.explanation .explanation__step1, .explanation .explanation__step3, .explanation .explanation__step2 {
+  position: relative;
+  transition: 0.5s background linear;
+}
+.explanation .explanation__step1:before, .explanation .explanation__step3:before, .explanation .explanation__step2:before {
+  font: var(--fa-font-solid);
+  content: "\f3cd";
+  padding-right: 27px;
+  padding-left: 33.47px;
+  color: #7E7E7E;
+}
+.explanation .explanation__step1:hover::before, .explanation .explanation__step3:hover::before, .explanation .explanation__step2:hover::before {
+  color: #9356DC;
+}
+.explanation .explanation__step1:hover, .explanation .explanation__step3:hover, .explanation .explanation__step2:hover {
+  background: #F5EDFF;
+}
+.explanation .explanation__step2:before {
+  font: var(--fa-font-solid);
+  content: "\f0ca";
+}
+.explanation .explanation__step3 {
+  margin-bottom: 68px;
+}
+.explanation .explanation__step3:before {
+  font: var(--fa-font-solid);
+  content: "\f54e";
+}
+.explanation .explanation__number {
+  position: absolute;
+  margin-left: -10px;
+  color: #FFFFFF;
+  background: #9356DC;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.restaurant-list {
+  background: #F7F7F7;
+  height: 1236px;
+}
+.restaurant-list h2 {
+  padding: 54px 0 30px 20px;
+}
+.restaurant-list .restaurant-card {
+  margin: auto;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 335px;
+  height: 251px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+.restaurant-list .restaurant-card img {
+  position: relative;
+}
+.restaurant-list .new {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+  width: 80px;
+  height: 29px;
+  z-index: 1;
+  margin-left: 246.35px;
+  margin-top: 10px;
+}
+.restaurant-list h3 {
+  margin-top: 16px;
+  margin-bottom: 5px;
+  margin-left: 12.81px;
+}
+.restaurant-list p {
+  margin-left: 12.81px;
+}
+.restaurant-list .fa-heart {
+  margin-left: 288px;
+  margin-top: -40px;
+  transition: transform 1.1s;
+}
+.restaurant-list .fa-heart:hover {
+  transform: scale(1.3);
+}
+
+footer {
+  background: #353535;
+}
+footer a {
+  color: white;
+  margin-bottom: 7px;
+}
+footer li:nth-of-type(1) {
+  font-family: "shrikhand";
+  color: white;
+  font-size: 18px;
+  padding-top: 17px;
+  margin-left: 25px;
+}
+footer li:nth-of-type(2) {
+  margin-top: 7px;
+}
+footer li:nth-of-type(3) {
+  margin-top: 7px;
+}
+footer li:nth-of-type(2)::before {
+  font: var(--fa-font-solid);
+  content: "\f2e7";
+  font-size: 11px;
+  margin-left: 25px;
+  padding-right: 11px;
+  color: white;
+}
+footer li:nth-of-type(3)::before {
+  font: var(--fa-font-solid);
+  content: "\f4c4";
+  color: white;
+  margin-left: 25px;
+  padding-right: 8px;
+  font-size: 11px;
+}
+footer li:nth-of-type(4) {
+  font-size: 16px;
+  margin-left: 25px;
+  margin-top: 7px;
+}
+footer li:nth-of-type(5) {
+  font-size: 16px;
+  margin-left: 25px;
+  margin-top: 7px;
+  padding-bottom: 33px;
 }
 
 /*# sourceMappingURL=style.css.map */

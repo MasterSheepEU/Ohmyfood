@@ -136,6 +136,7 @@ header {
         @extend %explanation;
         position: relative;
         transition: 0.5s background linear;
+        -webkit-transition: 0.5s background linear;
 
         &:before {
             font: var(--fa-font-solid);
@@ -246,6 +247,7 @@ header {
         top: 200px;
         right: 20px;
         transition: transform 1.1s;
+        -webkit-transition: transform 1.1s;
 
       
     }

@@ -75,6 +75,7 @@ body{
          top: 317px;
          right: 41px;
          transition: transform 1.1s;
+         -webkit-transition: transform 1.1s;
          
      }
      
@@ -162,6 +163,7 @@ body{
         border-radius: 0 15px 15px 0;
         background-color: $tertiary-color;
         transition: 1s;
+        -webkit-transition: 1s;
     }
 
     li:hover{

@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lepcha&family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap');
+@import "./libs/variables.scss";
+@import "./libs/false_class.scss";
+@import "./libs/mixins.scss";
+
+*{
+    @include reset_page
+}
+
+
+h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+p{
+    font-size: 15px;
+    font-weight: 300;
+}
+ .entry__price{
+    font-size: 15px;
+    font-weight: 700;
+ }
+
+
+
+body{
+    max-width: 1440px;
+    margin: auto;
+    font-family: 'roboto', sans-serif;
+}
+
+.logo_ohmyfood{
+    @extend %logo-ohmyfood;
+    position: relative;
+}
+
+.fa-arrow-left{
+    cursor: pointer;
+    position: absolute;
+    top: 26px;
+    left: 23px;
+}
+
+.background_img{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    max-width: 1440px;
+    height: 275px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+}
+
+
+
+.menu{
+    width: 100%;
+    background: $form-background;
+    border-radius:50px 50px 0 0;
+    margin-top: 220px;
+
+    h1{
+        font-family: 'Shrikhand';
+        font-weight: 400;
+        font-size: 28px;
+        padding: 32px 0 0 17px;
+        
+    }
+
+    .fa-heart{
+        @extend %heart;
+         top: 317px;
+         right: 41px;
+         transition: transform 1.1s;
+         
+     }
+     
+     .fa-heart:hover{
+        @extend %heart-hover;
+        transform: scale(1.3);
+ 
+     } 
+}
+
+.dish__entry, .dish__principal, .dish__dessert{
+    width: 90%;
+    margin: auto;
+
+    h2{
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 16px;
+        padding-bottom: 20px;
+        padding-top: 40px;
+
+        &::after{
+        content: "";
+        display: block;
+        width: 40px;
+        height: 3px;
+        margin-top: 7px;
+        background-color: #99E2D0;
+        }
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        row-gap: 13.97px;
+    }
+
+    li{
+        display: flex;
+        border-radius: 15.04px;
+        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+        height: 69px;
+        background: white;
+
+    }
+
+    h3{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    p{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .dish_name{
+        width: 70%;
+        padding: 12px 10px;
+        justify-content: space-between;
+    }
+
+    .dish__price{
+        display: flex;
+        width: 30%;
+        justify-content: end;
+        align-items: end;
+        padding: 0 18px 15px 0;
+    }
+
+    .dish__price::after{
+        font: var(--fa-font-solid);
+        content: "\f058";
+        width: 0;
+        height: 69px;
+        font-size: 0;
+        @include flex-center();
+        position: relative;
+        bottom: -15px;
+        right: -18px;
+        color: white;
+        border-radius: 0 15px 15px 0;
+        background-color: $tertiary-color;
+        transition: 1s;
+    }
+
+    li:hover{
+        .dish__price::after{
+            width: 59px;
+            font-size: 20px;
+        }
+    }
+}
+
+
+
+
+button {
+
+    @extend %btn;
+    width: 186px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    &:hover {
+        background: $secondary-gradient;
+        box-shadow: $secondary-shadow
+
+    }
+
+    span {
+        @extend %reverse-text;
+    }
+}
+
+footer {
+    background: $footer-background;
+
+    a {
+        color: $secondary-police;
+        margin-bottom: 7px;
+    }
+
+    li:nth-of-type(1) {
+        font-family: 'shrikhand';
+        color: $secondary-police;
+        font-size: 18px;
+        padding-top: 17px;
+        margin-left: 25px;
+
+    }
+
+    li:nth-of-type(2) {
+        margin-top: 7px;
+    }
+
+    li:nth-of-type(3) {
+        margin-top: 7px;
+    }
+
+    li:nth-of-type(2)::before {
+        font: var(--fa-font-solid);
+        content: "\f2e7";
+        font-size: 11px;
+        margin-left: 25px;
+        padding-right: 11px;
+        color: $secondary-police;
+
+    }
+
+    li:nth-of-type(3)::before {
+        font: var(--fa-font-solid);
+        content: "\f4c4";
+        color: $secondary-police;
+        margin-left: 25px;
+        padding-right: 8px;
+        font-size: 11px;
+
+
+    }
+
+    li:nth-of-type(4) {
+        font-size: 16px;
+        margin-left: 25px;
+        margin-top: 7px;
+    }
+
+    li:nth-of-type(5) {
+        font-size: 16px;
+        margin-left: 25px;
+        margin-top: 7px;
+        padding-bottom: 33px;
+    }
+
+}

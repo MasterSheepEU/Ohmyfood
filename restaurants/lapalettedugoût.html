@@ -4,81 +4,166 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/style-restaurant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" type="text/css" href="../assets/style_restaurant.css">
     <title>La palette du goût</title>
 </head>
 <body>
 
 
     <header>
-
-        <img src="assets/images/logo/ohmyfood.png" alt="Logo Ohmyfood">
-        <figure><img src="assets/images/restaurants/lapalettedugout.jpg" alt="La palette du goût"></figure>
+        <img src="../assets/images/logo/ohmyfood.png" alt="Logo Ohmyfood" class="logo_ohmyfood">
+        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <img class="background_img" src="../assets/images/restaurants/lapalettedugout.jpg" alt="La plalette du goût">
     </header>
 
-    <main>
+<main>
 
-    <form action="traitement.php" method="post">
+    <div class="menu">
 
-        <section>
+        <h1>La palette du goût</h1>
+        <i class="fa-regular fa-heart"></i>
+
+        <section class="dish__entry">
+
+            <h2>ENTRÉES</h2>
+
+            <ul>
+
+                <li>
+
+                    <div class="dish_name">
+                        <h3>Fricassée d'escargots</h3>
+                        <p>Au piment d'Espelette</p>
+                    </div>
+                    <div class="dish__price">25€</div>
+
+                </li>
+
+
+                <li>
+
+                    <div class="dish_name">
+                        <h3>Foie gras de canard mi-cuit</h3>
+                        <p>Et ses copeaux de truffe noire</p>
+                    </div>
+                    <div class="dish__price">35€</div>
+
+                </li>
+
+
+                <li>
+
+                    <div class="dish_name">
+                        <h3>Œuf au plat</h3>
+                        <p>Assaisonné à la truffe sur lit de caviar</p>
+                    </div>
+                    <div class="dish__price">20€</div>
+
+                </li>
+
+            </ul>
 
         </section>
 
-        <section>
+        <section class="dish__principal">
+
+            <h2>PLATS</h2>
+
+            <ul>
+                <li>
+
+                    <div class="dish_name">
+                        <h3>Filet de bœuf aux herbes</h3>
+                        <p>Accompagné de sa ribambelle de légumes</p>
+                    </div>
+                    <div class="dish__price">40€</div>
+
+                </li>
+
+
+                <li>
+
+                    <div class="dish_name">
+                        <h3>Parmentier de queue de bœuf</h3>
+                        <p>À la truffe noire sur sa purée de panais</p>
+                    </div>
+                    <div class="dish__price">35€</div>
+
+                </li>
+
+
+                <li>
+                    <div class="dish_name">
+                        <h3>Filet de turbot</h3>
+                        <p>Aux agrumes</p>
+                    </div>
+                    <div class="dish__price">44€</div>
+
+
+                </li>
+            </ul>
 
         </section>
 
-        <section>
+        <section class="dish__dessert">
+
+            <h2>DESSERTS</h2>
+
+            <ul>
+                <li>
+                    <div class="dish_name">
+                        <h3>Paris-Brest</h3>
+                        <p>Revisité</p>
+                    </div>
+                    <div class="dish__price">18€</div>
+
+                </li>
+
+                <li>
+                    <div class="dish_name">
+                        <h3>Macaron au chocolat d'exception</h3>
+                        <p>Et glace à la vanille de Madagascar</p>
+                    </div>
+                    <div class="dish__price">22€</div>
+
+                </li>
+
+                <li>
+                    <div class="dish_name">
+                        <h3>Mousse au chocolat</h3>
+                        <p>Au piment d'Espelette et à la truffe noire</p>
+                    </div>
+                    <div class="dish__price">23€</div>
+
+                </li>
+
+            </ul>
 
         </section>
 
-    
-    </form>
-    
-    </main>
+        <button><span>Commander</span></button>
+
+    </div>
+
+</main>
+
+    <footer>
+
+        <ul>
+            <li><a href="#">ohmyfood</a></li>
+            <li><a href="#">Proposer un restaurant</a></li>
+            <li><a href="#">Devenir partenaire</a></li>
+            <li><a href="#">Mention légales</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </footer>
 
 
 
 </body>
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-<form action="traitement.php" method="post">
-    <h2>Entrées</h2>
-    <input type="radio" name="entree" value="entree1"> Entrée 1<br>
-    <input type="radio" name="entree" value="entree2"> Entrée 2<br>
-    <input type="radio" name="entree" value="entree3"> Entrée 3<br>
-  
-    <h2>Plats principaux</h2>
-    <input type="radio" name="plat" value="plat1"> Plat 1<br>
-    <input type="radio" name="plat" value="plat2"> Plat 2<br>
-    <input type="radio" name="plat" value="plat3"> Plat 3<br>
-  
-    <h2>Desserts</h2>
-    <input type="radio" name="dessert" value="dessert1"> Dessert 1<br>
-    <input type="radio" name="dessert" value="dessert2"> Dessert 2<br>
-    <input type="radio" name="dessert" value="dessert3"> Dessert 3<br>
-  
-    <br>
-    <input type="submit" value="Commander">
-  </form>
-   -->

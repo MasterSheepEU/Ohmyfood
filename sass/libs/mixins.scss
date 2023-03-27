@@ -1,0 +1,15 @@
+@mixin reset_page{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        color: $default-police;
+        box-sizing: border-box;
+}
+
+@mixin flex-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+    

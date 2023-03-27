@@ -2,6 +2,8 @@
 @import "./libs/variables.scss";
 @import "./libs/false_class.scss";
 @import "./libs/mixins.scss";
+@import "./libs/media.scss";
+
 
 /* Paramétres globaux */
 
@@ -78,7 +80,6 @@ header {
     }
 
     h2{
-        width: 275px;
         height: 68px;
         margin: auto;
         margin-top: 39px;
@@ -86,7 +87,6 @@ header {
     }
 
     p{
-        width: 315px;
         height: 46px;
         margin: auto;
         text-align: center;
@@ -284,10 +284,6 @@ footer {
         margin-top: 7px;
     }
 
-    li:nth-of-type(3) {
-        margin-top: 7px;
-    }
-
     li:nth-of-type(2)::before {
         font: var(--fa-font-solid);
         content: "\f2e7";
@@ -296,6 +292,10 @@ footer {
         padding-right: 11px;
         color: $secondary-police;
 
+    }
+
+    li:nth-of-type(3) {
+        margin-top: 7px;
     }
 
     li:nth-of-type(3)::before {
@@ -320,6 +320,126 @@ footer {
         margin-left: 25px;
         margin-top: 7px;
         padding-bottom: 33px;
+    }
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+    body {
+        max-width: 1440px;
+        width: 100%;
+    }
+
+    .explanation {
+
+        .explanation__tittle {
+            margin-left: 233px;
+        }
+    }
+
+    .explanation {
+
+        ul {
+            flex-direction: row;
+            padding: 0;
+            padding-right: 192px;
+            padding-left: 205px;
+        }
+
+    }
+
+
+
+    .restaurant-list {
+        height: auto;
+
+        .restaurant-card {
+            width: 47%;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            margin-left: 212px;
+        }
+    }
+
+
+
+    .restaurant_organization {
+        margin: auto;
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    footer {
+
+        height: 114px;
+
+        ul {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 0;
+            margin-left: 300px;
+        }
+
+        li:nth-of-type(1) {
+            font-family: 'shrikhand';
+            color: $secondary-police;
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            order: 5;
+            margin-right: 90px;
+        }
+
+        li:nth-of-type(2) {
+            margin: 0;
+        }
+
+        li:nth-of-type(2)::before {
+            font: var(--fa-font-solid);
+            content: "\f2e7";
+            font-size: 11px;
+            margin-left: 25px;
+            padding: 0;
+            color: $secondary-police;
+
+        }
+
+        li:nth-of-type(3) {
+            margin: 0;
+        }
+
+        li:nth-of-type(3)::before {
+            font: var(--fa-font-solid);
+            content: "\f4c4";
+            color: $secondary-police;
+            margin: 0;
+            padding: 0;
+            font-size: 11px;
+
+
+        }
+
+        li:nth-of-type(4) {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        li:nth-of-type(5) {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
     }
 
 }

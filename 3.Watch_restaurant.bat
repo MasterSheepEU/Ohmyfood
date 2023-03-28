@@ -1,1 +1,0 @@
-./dart-sass/sass sass/style_restaurant.scss assets/style_restaurant.css --watch

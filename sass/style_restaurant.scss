@@ -2,7 +2,6 @@
 @import "./libs/variables.scss";
 @import "./libs/false_class.scss";
 @import "./libs/mixins.scss";
-@import "./libs/media.scss";
 
 *{
     @include reset_page
@@ -89,6 +88,7 @@ body{
 .dish__entry, .dish__principal, .dish__dessert{
     width: 90%;
     margin: auto;
+    opacity: 0;
 
     h2{
         font-family: 'Roboto';
@@ -174,6 +174,31 @@ body{
     }
 }
 
+.dish__entry{
+    animation: slidedown 2.5s forwards;
+    animation-delay: 2s;
+}
+
+.dish__principal{
+    animation: slidedown 2.5s forwards;
+    animation-delay: 1s;
+}
+
+.dish__dessert{
+    animation: slidedown 2.5s forwards; 
+}
+
+@keyframes slidedown {
+    0%{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: rotateY(0);
+        opacity: 1
+    }
+}
 
 button {
 
@@ -192,6 +217,18 @@ button {
         @extend %reverse-text;
     }
 }
+
+
+.btn{
+    height: 80px;
+}
+
+
+button{
+    margin-top: 40px;
+}
+
+
 
 footer {
     background: $footer-background;
@@ -251,7 +288,6 @@ footer {
         margin-top: 7px;
         padding-bottom: 33px;
     }
-
 }
 
 
@@ -279,18 +315,14 @@ footer {
 }
 
 
+.btn{
+    height: 80px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
+button{
+    margin-top: 40px;
+}
 
 footer{
 
